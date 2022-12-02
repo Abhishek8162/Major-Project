@@ -1,0 +1,56 @@
+.Examtitle
+{
+    background-color: black;
+    color: white;
+    margin-top: 0px;
+    text-align: center;
+ 
+    padding:5em;
+    padding-left: 3em;
+    
+
+}
+
+.Examtitle> h1
+{
+margin-top:0px;
+
+}
+
+.Testlist 
+{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+}
+
+.Testlist > h2
+{
+    color:crimson;
+}
+
+.tests
+{
+    background-color:rgb(182, 224, 248);
+    padding:1em;
+    font-weight: bold;
+    border-radius:12px;
+    margin-bottom:1em;
+
+
+}
+
+.tests:hover
+{
+    background-color:rgb(132, 208, 252);
+
+}
+
+a
+{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+
+}
+ 

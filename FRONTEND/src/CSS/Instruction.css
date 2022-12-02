@@ -1,0 +1,32 @@
+.instructiontitle >h2
+{
+    color: crimson;
+    font-weight: bold;
+    /* margin-top: 0px; */
+    padding: 1em;
+    
+
+}
+
+.instructiondetails 
+{
+    padding: 1em;
+    padding-top: 0em;
+    font-weight: bold;
+}
+
+.acceptbtn 
+{
+    height: 3em;
+    background-color:rgb(107, 186, 254);
+    font: 1em sans-serif;
+    font-weight: bold;
+    border-radius: 1em;
+
+}
+
+.accept
+{
+    padding: 1em;
+
+}

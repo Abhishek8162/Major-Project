@@ -1,0 +1,45 @@
+.Live
+{
+    background: white;
+    height: 100vh;
+}
+
+.live-heading
+{
+    display:flex;
+    flex-direction:row;
+    
+}
+
+.live-heading>h2
+{
+    color:black;
+}
+
+.sections
+{
+    display:flex;
+    flex-direction:row;
+}
+
+
+
+.sections>p
+{
+    margin: 1em;
+}
+
+.examsection
+{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.questionsection
+{
+    background-color:rgb(182, 228, 139);
+    padding: 2em;
+    width: 40%;
+
+}

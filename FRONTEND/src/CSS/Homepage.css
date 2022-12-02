@@ -1,0 +1,36 @@
+h1
+{
+    color: rgb(255, 255, 255);
+    font-size:4em;
+}
+
+h2
+{
+    color: rgb(255, 255, 255);
+}
+
+.title
+{
+    display:flex;
+    background-image: url("../Images/homepage.png");
+    height: 100vh;
+}
+
+
+.title_desc
+{
+    padding:3em;
+    width: 50%;
+
+    
+}
+
+.title_img
+{
+    margin-top: 3em;
+}
+
+.title_img img
+{
+    width: 100%;
+}
