@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-image:url(../Images/violetbg.png) ;
 }
 
 
@@ -16,7 +17,7 @@ img{
 width: 100px;
 }
 
-.mnc_lists
+.Exam-cards
 {
     
 display: flex;
@@ -27,7 +28,7 @@ margin-top: 2%;
 
 }
 
-.mnc_list
+.Exam-card
 {
     width: 14%;
     margin-left: 2%;
@@ -67,7 +68,7 @@ border-radius: 2%;
 }
 
 
-.mnc_lists img
+.Exam-cards img
 {
     width: 100px;
 height: 90px;
@@ -114,7 +115,7 @@ h4
     font-weight: bold;
 }
 
-.mnc_list:hover {
+.Exam-card:hover {
     background-color: rgb(0, 0, 0);
     color: white;
 }

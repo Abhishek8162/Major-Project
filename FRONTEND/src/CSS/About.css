@@ -1,0 +1,121 @@
+/* *, *:before, *:after {
+    box-sizing: inherit;
+  }
+   */
+
+
+.about-page {
+  
+  background-image: url("../Images/violetbg.png");
+  height: 170vh!important;
+
+  background-position: 0% 0%;
+  background-size: 100% 100%;
+}
+
+
+.about-section+h2 {
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  margin-left: 2em;
+  padding: 0 8px;
+
+}
+
+.list_of_unavailable_medicine {
+  display: none;
+}
+
+.about-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-card>img {
+  width: 100%;
+  height: 12em;
+}
+
+
+.about-section {
+  padding: 2em;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.about-section+.card-container {
+  padding: 0 16px;
+}
+
+.card-container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.about-card .abouttitle {
+  color: grey;
+}
+
+.about-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.about-section+.about-button:hover {
+  background-color: #555;
+}
+
+
+.card-container
+{
+  padding:2em;
+  /* background: #555; */
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.otp_main {
+  width: 30%;
+  margin: 2em auto;
+
+}
+
+.otp_main input[type="text"] {
+  width: 32em;
+  height: 2em;
+  letter-spacing: 2px;
+  font-weight: bold;
+
+}
+
+.otp_main button {
+  width: 33em;
+  height: 3.7em;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.imgcard-container{
+  width: 50%;
+}

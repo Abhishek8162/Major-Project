@@ -1,14 +1,24 @@
 import '../CSS/header.css';
+import { BrowserRouter as Router, Routes, Route, 
+  Navigate,Link } from 'react-router-dom';
+
+import React from "react";
+
 
 function Header() {
     return (
+      <>
         <div class="topnav">
-        <a href="Home"><b>Home</b> </a>
-        <a href="Exams"><b>Exams</b></a>
-        <a href="Profile"><b>Profile</b></a>
-        <a href="Services"><b>Services</b></a>
-        <a href="About"><b>About</b></a>
+        <Link to="Home"><b> Home </b></Link>  
+        <Link to="Exams"><b>Exams</b></Link>
+        <Link to="Dashboard"><b>Dashboard</b></Link>
+        <Link to="Services"><b>Services</b></Link>
+        <Link to="About"><b>About</b></Link>
       </div>
+       </>
+
+ 
+
     );
   }
   

@@ -1,6 +1,7 @@
 .Live
 {
-    background: white;
+    /* background-color: rgb(250, 238, 181); */
+    background-image: url("../Images/bluebg.png");
     height: 100vh;
 }
 
@@ -8,38 +9,167 @@
 {
     display:flex;
     flex-direction:row;
+    padding:1em 2em ;
     
 }
 
 .live-heading>h2
 {
     color:black;
+    padding: 0em 2em;
+    font-size: 2em;
 }
 
 .sections
 {
     display:flex;
     flex-direction:row;
+    margin-left: 0em;
 }
 
 
 
 .sections>p
 {
-    margin: 1em;
+    margin: 1em 1em;
+    background-color:rgb(43, 236, 220); 
+    padding:5px;
+    border-radius: 5px;
+    font-weight: bold;
+    height: fit-content;
+    border: solid black 2px;
 }
+
+.sections>p:nth-child(5)
+{
+  margin-left:6em;
+  background-color: crimson;
+  color:white;
+}
+
+
 
 .examsection
 {
-    padding: 1em;
+    padding: 0em 5em;
     display: flex;
     flex-direction: row;
+    
 }
 
 .questionsection
 {
-    background-color:rgb(182, 228, 139);
+    background-color:rgb(23, 172, 236);
     padding: 2em;
-    width: 40%;
+    width: 60%;
+    height: 25em;
+    font-weight: bold;
+    margin-left: 1em;
+    box-shadow: 15px 15px 10px rgb(168, 227, 253);
 
+}
+
+.questionsection p
+{
+    margin-left: 2px;
+    font-size: 1.2em;
+}
+
+.questionsection li
+{
+    font-size: 1.2em;
+}
+
+.questionsection >div
+{
+    display:flex;
+    flex-direction: row;
+    
+}
+
+.Slider {
+    margin:2em 0;
+    margin-top: 7em;
+    
+}
+
+
+.Slider>button {
+   font-weight: bold;
+   padding: 5px;
+   
+   background: rgb(9, 235, 9);  
+   border-radius: 5px;
+
+    
+}
+
+.Slider>button:nth-child(2) {
+    margin:0em 2em;
+     background: rgb(51, 222, 202);
+    
+}
+
+.Slider>button:nth-child(3) {
+   background: rgb(9, 235, 9);
+    
+}
+
+.Slider>button:nth-child(4) {
+    background: rgb(248, 35, 74);
+    margin-left:auto ;
+    
+     
+ }
+ 
+
+
+ul {
+    list-style-type:none;
+}
+
+
+.questionpallette
+{
+    margin-left: 4em;
+    width: 30%;
+    
+    box-shadow: 5px 5px 10px rgb(168, 227, 253);
+   
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    /* width: 20em; */
+    height: 28em;
+  }
+  .grid-container>div {
+    background-color: #ffffffcc;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  
+  .grid-container>div
+   {
+    
+  }
+
+  #cameracontainer {
+	margin-top: -1em;
+    margin-left:1em;
+	width: 7em;
+	height: 7em;
+	border: 10px #333 solid;
+}
+#videoElement {
+	width: 7em;
+	height: 7em;
+	background-color: #666;
 }

@@ -1,9 +1,23 @@
+.instructionpage
+{
+                 
+    
+    background-image: url("../Images/violetbg.png");
+    height: 170vh!important;
+
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+}
+
+
+
 .instructiontitle >h2
 {
     color: crimson;
     font-weight: bold;
-    /* margin-top: 0px; */
+    margin-left: 2em;
     padding: 1em;
+    font-size: 2em;
     
 
 }
@@ -13,6 +27,13 @@
     padding: 1em;
     padding-top: 0em;
     font-weight: bold;
+    margin: 0em 5em;
+    width: 60%;
+}
+
+.instructiondetails >h2
+{
+    color:crimson;
 }
 
 .acceptbtn 
@@ -28,5 +49,11 @@
 .accept
 {
     padding: 1em;
+    margin-left: 5em;
 
+}
+
+.acceptinstructions >p
+{
+    display: inline;
 }

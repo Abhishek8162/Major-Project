@@ -30,7 +30,7 @@ function Exams() {
     
     return (
 
-        <>
+        <div class='Exampage'>
 
 
     <div className ="ExamCategory">
@@ -46,12 +46,12 @@ function Exams() {
 </div>
    
 
-    <div className="mnc_lists">
+    <div className="Exam-cards">
 
    
 
 
-    <div className="mnc_list" onClick={() => {
+    <div className="Exam-card" onClick={() => {
     window.location.href = 'Testlist';
   }}>
        
@@ -62,7 +62,7 @@ function Exams() {
    
     
 
-    <div className="mnc_list" onClick={() => {
+    <div className="Exam-card" onClick={() => {
     window.location.href = 'Testlist';
   }}>
         <img src={tcs} />
@@ -70,7 +70,7 @@ function Exams() {
 
     </div>
 
-    <div className="mnc_list" onClick={() => {
+    <div className="Exam-card" onClick={() => {
     window.location.href = 'Testlist';
   }}>
         <img src={wipro} />
@@ -78,13 +78,13 @@ function Exams() {
 
     </div>
 
-    <div className="mnc_list">
+    <div className="Exam-card">
         <img src={hcl} />
         <h4>HCL</h4>
 
     </div>
 
-    <div className="mnc_list">
+    <div className="Exam-card">
         <img src={infosys} />
         <h4>Infosys</h4>
 
@@ -107,40 +107,40 @@ function Exams() {
   <p></p>
      </div>
   
-      <div className="mnc_lists">
+      <div className="Exam-cards">
   
      
   
   
-      <div className="mnc_list">
+      <div className="Exam-card">
         <img src={gatecs} alt=""/>
           <h4>Time : 3 hrs</h4>
           <h4>Total Questions : 65</h4>
   
       </div>
   
-      <div className="mnc_list">
+      <div className="Exam-card">
         <img src={cat} alt=""/>
           <h4>Time : 3 hrs</h4>
           <h4>Total Questions : 100</h4>
   
       </div>
   
-      <div className="mnc_list">
+      <div className="Exam-card">
         <img src={jeemain} alt=""/>
           <h4>Time : 3 hrs</h4>
           <h4>Total Questions : 50</h4>
   
       </div>
   
-      <div className="mnc_list">
+      <div className="Exam-card">
         <img src={upsc} alt=""/>
           <h4>Time : 3 hrs</h4>
           <h4>Total Questions : 100</h4>
   
       </div>
   
-      <div className="mnc_list">
+      <div className="Exam-card">
         <img src={ssccgl} alt=""/>
           <h4>Time : 3 hrs</h4>
           <h4>Total Questions : 50</h4>
@@ -157,7 +157,7 @@ function Exams() {
 
 
 
-</>
+</div>
 );
 }
 

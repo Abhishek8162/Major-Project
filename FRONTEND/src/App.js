@@ -8,6 +8,10 @@ import Login from './Components/Login.js'
 import Testlist from './Components/Testlist.js'
 import Live from './Components/Live.js'
 import Instruction from './Components/Instruction.js'
+import Completion from './Components/Completion.js'
+import About from './Components/About.js'
+import Profile from './Components/Profile.js'
+import UserDashboard from './Components/UserDashboard.js'
 
 import { BrowserRouter as Router, Routes, Route, 
   Navigate,Link } from 'react-router-dom';
@@ -19,9 +23,10 @@ function App() {
   return (
     <>
     
-        <Header/>
+        
       <Router>
-  
+
+      <Header/>
 
       
       <Routes>
@@ -32,7 +37,11 @@ function App() {
         <Route path="/Examlist" element={<Login/>}/>
         <Route path="/Instruction" element={<Instruction/>}/>
         <Route path="/Live" element={<Live/>}/>
-        
+        <Route path="/Completion" element={<Completion/>}/>
+        <Route exact path="/Profile" element={<Profile/>}/>
+        <Route exact path="/Dashboard" element={<UserDashboard/>}/>
+
+        <Route path="/About" element={<About/>}/>
         <Route path="/Testlist" element={<Testlist/>}/>
 
         <Route path="/Home" element={<Navigate replace to="/" />} />
