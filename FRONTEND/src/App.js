@@ -30,7 +30,9 @@ function App() {
 
       
       <Routes>
-        <Route path="/" element={<Title_desc/>}/>
+
+
+         <Route path="/" element={<Title_desc/>}/>
         <Route path="/Exams" element={<Exams/>}/>
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/Login" element={<Login/>}/>
@@ -44,7 +46,9 @@ function App() {
         <Route path="/About" element={<About/>}/>
         <Route path="/Testlist" element={<Testlist/>}/>
 
-        <Route path="/Home" element={<Navigate replace to="/" />} />
+        <Route path="/Home" element={<Navigate replace to="/" />} /> 
+
+
       </Routes>
 
       </Router>
