@@ -12,6 +12,8 @@ import Completion from './Components/Completion.js'
 import About from './Components/About.js'
 import Profile from './Components/Profile.js'
 import UserDashboard from './Components/UserDashboard.js'
+import AdminDashboard from './Components/AdminDashboard.js'
+
 
 import { BrowserRouter as Router, Routes, Route, 
   Navigate,Link } from 'react-router-dom';
@@ -41,7 +43,9 @@ function App() {
         <Route path="/Live" element={<Live/>}/>
         <Route path="/Completion" element={<Completion/>}/>
         <Route exact path="/Profile" element={<Profile/>}/>
-        <Route exact path="/Dashboard" element={<UserDashboard/>}/>
+        <Route exact path="/UserDashboard" element={<UserDashboard/>}/>
+        
+        <Route exact path="/AdminDashboard" element={<AdminDashboard/>}/>
 
         <Route path="/About" element={<About/>}/>
         <Route path="/Testlist" element={<Testlist/>}/>
