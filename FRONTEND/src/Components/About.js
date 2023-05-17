@@ -2,9 +2,9 @@ import React from 'react'
 import '../CSS/About.css'
 
 import abhishek from "../Images/abhishek.jpg"
-import arup from "../Images/abhishek.jpg"
-import amit from "../Images/abhishek.jpg"
-import dipasa from "../Images/abhishek.jpg"
+import arup from "../Images/arup.jpg"
+import amit from "../Images/amit.jpg"
+import dipasa from "../Images/dipasa.jpg"
 
 function About() {
   return (

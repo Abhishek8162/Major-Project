@@ -1,0 +1,45 @@
+.Services-page-heading
+{
+    text-align: center;
+    margin: 0.5em;
+}
+
+.Services-page
+{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+
+
+.service-card
+{
+    background: rgb(98, 164, 255);
+    padding: 1em;
+    margin: 2em;
+    width: 20em;
+    height: 10em;
+    text-align:center;
+    box-shadow: #6c6b6b 10px 10px;
+
+    border-radius: 2%;
+
+}
+
+.service-card:hover 
+{
+    background: white;
+}
+.service-card:hover > h2
+{
+    background: white;
+    color: #000!important;
+}
+
+.service-card> h2
+{
+position: relative;
+top: 20%;
+
+}

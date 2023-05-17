@@ -1,154 +1,120 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../CSS/DashboardUser.css";
 
 import { useState } from "react";
+
+import { BrowserRouter as Router, Routes, Route, 
+  Navigate,Link, BrowserRouter } from 'react-router-dom';
+
+import UserProfile from './User Dashboard/UserProfile';
+ import EditProfile from './User Dashboard/EditProfile';
+
+
+
+
 
 function DashboardUser() {
   const [isprofilecard, setIsprofilecard] = useState(true);
   const [isorderedmedicines, setIsorderedmedicines] = useState(false);
   const [islabtest, setIslabtest] = useState(false);
 
+  const [content,setContent]=useState(UserProfile);
+  
+  function handleClick(event)
+{
+  var id=event.currentTarget.id;
+  if(id=="userprofile")
+  setContent(UserProfile);
+
+if(id=="editprofile")
+setContent(EditProfile);
+
+
+
+}
+
   return (
     <>
-      <div className="AdminPage">
-        <div className="Admin-Navigation">
-          <Link
-            to="Profile"
-            onClick={() => {
-              setIsorderedmedicines(false);
-              setIsprofilecard(true);
-              setIslabtest(false);
-            }}
-          >
-            <p>
-              <b>Profile</b>
-            </p>
-          </Link>
-          <Link
-            to="#"
-            onClick={() => {
-              setIsorderedmedicines(true);
-              setIsprofilecard(false);
-              setIslabtest(false);
-            }}
-          >
-            <p>
-              <b>Exams Given</b>
-            </p>{" "}
-          </Link>
-          <Link
-            to="#"
-            onClick={() => {
-              setIsorderedmedicines(false);
-              setIsprofilecard(false);
-              setIslabtest(true);
-            }}
-          >
-            <p>
-              <b>Request Exams</b>
-            </p>{" "}
-          </Link>
-        </div>
+    
+    <div className="UserDashBoard-Page">
 
-        <div className="Admin-list">
-          <div className="MedicineList">
-            <div
-              class="Profilecard"
-              style={{ display: isprofilecard ? "flex" : "none" }}
-            >
-              <div class="cardpic">
-                <img
-                  src="https://www.w3schools.com/howto/img_avatar2.png"
-                  alt="John"
-                />
-                <h1>
-                  <b>Amit Rout</b>{" "}
-                </h1>
-              </div>
-              <div className="cardtitle">
-                <p class="title">User ID : 63872ff3a6245d0d2643f1c1</p>
-                <p>
-                  <b>Email : amitroutard@gmail.com</b>
-                </p>
-                <p>
-                  <b>Join Date : 2022-11-30</b>
-                </p>
-                <p>
-                  <button>Edit Profile</button>
-                </p>
-              </div>
-            </div>
+  
+    <div className="UserDashboard-Sidebar">
+     
+     <ul>
+     <li >
+         <Link to="#" id="userprofile" onClick={handleClick}><p>User Profile</p></Link>
+       </li>
+       <li >
+         <Link to="#"  id="editprofile"   onClick={handleClick} >Edit Profile</Link>
+       </li>
+       
 
-            <div
-              class="MedicinesCard"
-              style={{ display: isorderedmedicines ? "block" : "none" }}
-            >
-              <div className="card" style={{ width: "25em" }}>
-                <img
-                  src="https://media.istockphoto.com/id/1250471519/photo/vial-of-insulin-injection-with-a-syringe-on-black-table-and-stainless-steel-background.jpg?s=612x612&w=0&k=20&c=KE5VHmGmkSpQrhwfg5NUyMzECumK9lsiHDg9dJyvLPk="
-                  alt="Avatar"
-                />
-                <div className="container">
-                  <h4>
-                    <b>Insulin</b>
-                  </h4>
-                  <h6>
-                    <b>
-                      Insulin is a hormone created by your pancreas that
-                      controls the amount of glucose in your bloodstream at any
-                      given moment. It also helps store glucose in your ...
-                    </b>
-                  </h6>
+       <li >
+         <Link href="#" >Statistics</Link>
+       </li>
+       
+     </ul>
+     <hr/>
+     
+ 
+     <ul>
+     <li >
+         <Link href="#" ><p>Tests Given</p></Link>
+       </li>
+       <li >
+         <Link href="#" >Test Appeared</Link>
+       </li>
+       <li >
+         <Link href="#" >Test Requested</Link>
+       </li>
+      
+       
+       
+     </ul>
+ <hr/>
+ 
+ 
+ 
+     <ul>
+     <li >
+         <Link href="#" ><p>Feedback</p></Link>
+       </li>
+       <li >
+         <Link href="#" >Give FeedBack</Link>
+       </li>
+       <li >
+         <Link href="#" >FAQs</Link>
+       </li>
+       <li >
+         <Link href="#" >Help</Link>
+       </li>
+       
+     </ul>
+ 
+    </div>
 
-                  <h4>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                  </h4>
 
-                  <Link to="/Booking">
-                    <button>Status : Request State</button>
-                  </Link>
-                </div>
-                        
-              </div>
-            </div>
 
-            <div
-              class="LabtestCard"
-              style={{ display: islabtest ? "block" : "none" }}
-            >
-              <div className="card" style={{ width: "25em" }}>
-                <img
-                  src="https://www.shutterstock.com/image-photo/hands-lab-technician-tube-blood-260nw-441264445.jpg"
-                  alt="Avatar"
-                />
-                <div className="container">
-                  <h4>
-                    <b>Blood Lab Test</b>
-                  </h4>
-                  <h4>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                  </h4>
-                  <Link to="/Booking">
-                    <button>Lab Status: Processing</button>
-                  </Link>
-                </div>
-                        
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    
+     
+    {content}
+   
+
+
+    </div>
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
 
 export default DashboardUser;

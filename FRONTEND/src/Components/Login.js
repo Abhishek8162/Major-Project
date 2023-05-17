@@ -71,7 +71,7 @@ function Login()
 
 <input type="email" name="email" placeholder="Email" value={email} 
  onChange={(e)=>{setEmail(e.target.value)}} />
-<input type="password" name="password" placeholder="password" value={email} 
+<input type="password" name="password" placeholder="password" value={password} 
  onChange={(e)=>{setPassword(e.target.value)}} />
 
 <input type="submit" name="" value="Log in" id="submit"/>

@@ -13,6 +13,7 @@ import About from './Components/About.js'
 import Profile from './Components/Profile.js'
 import UserDashboard from './Components/UserDashboard.js'
 import AdminDashboard from './Components/AdminDashboard.js'
+import Services from './Components/Services.js'
 
 
 import { BrowserRouter as Router, Routes, Route, 
@@ -26,7 +27,7 @@ function App() {
     <>
     
         
-      <Router>
+      
 
       <Header/>
 
@@ -42,8 +43,12 @@ function App() {
         <Route path="/Instruction" element={<Instruction/>}/>
         <Route path="/Live" element={<Live/>}/>
         <Route path="/Completion" element={<Completion/>}/>
+        
         <Route exact path="/Profile" element={<Profile/>}/>
-        <Route exact path="/UserDashboard" element={<UserDashboard/>}/>
+        <Route exact path="/Services" element={<Services/>}/>
+        <Route  path="/UserDashboard" element={<UserDashboard/>}/>
+
+        
         
         <Route exact path="/AdminDashboard" element={<AdminDashboard/>}/>
 
@@ -55,7 +60,7 @@ function App() {
 
       </Routes>
 
-      </Router>
+      
       </>
   
   );

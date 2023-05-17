@@ -1,117 +1,117 @@
-.AdminPage {
-    background-color: rgb(23, 21, 32) !important;
+.UserDashBoard-Page
+{
+    background: #332f45;
+    width:100%;
     height: 100vh;
-
     display: flex;
     flex-direction: row;
-}
-
-.Admin-Navigation {
-    width: 20%;
-    padding: 2em;
+    
 
 }
 
-.Admin-Navigation p {
-    color: white !important;
-    text-decoration: none !important;
-    text-decoration-position: none;
+.UserDashboard-Sidebar
+{
+    background: #24222f;
+    width:20%;
+    height:98%;
+    
+    padding: 5px;
+
+
+}
+.UserDashboard-Sidebar p
+{
+color: #fff;
+background-color: #24222f!important;
+font-weight: bold;
+font-size: x-large;
 }
 
+.UserDashboard-Sidebar li
+{
+   margin: 20px;
+   padding: 0;
 
+  
 
-.Admin-list {
+}
+
+.UserDashboard-Sidebar a
+{
+   color :rgb(226, 219, 219);
+   font-weight :bold;
+
+}
+
+.UserDashboard-Content
+{
     width: 100%;
-    padding: 2em;
-    background-color: rgb(40, 38, 44) !important;
-    overflow-y: auto;
 }
 
-.MedicineList {
-    display: flex;
+.user-profile-page
+{
+    background:rgb(226 232 240);
+    width: 100%;
+
+    height: 100%;
+}
+
+.user-profile-details
+{
+    display:flex;
     flex-direction: row;
-    padding: 1em;
-    background-color: rgb(190, 207, 229) !important;
-    margin-bottom: 2em;
-    border-radius: 45px;
+    /* margin:2em;   */
+    padding: 2em;   
 }
 
-.MedicineList>img {
-    width: 5em;
-    height: 5em;
-    margin-top: auto;
-    margin-bottom: auto;
-
-}
-
-.MedicineList h5 {
-    margin-left: 2em;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.MedicineList h4 {
-    margin-left: 2em;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.MedicineList>.card {
-    box-shadow: 0 4px 8px 0 rgba(95, 140, 213, 0.915);
-    width: 50em;
+.user-profile-details > div
+{
     margin: 2em;
-    padding: 2em;
-    margin: auto;
+    background-color: #fff;
+   
+    border-radius: 2%;
+    
+    font-size: larger;
+    box-shadow: #a8a8aa 5px 5px;
 
-    font-family: arial;
-    display: flex;
-    flex-direction: row;
 }
 
-.cardpic {
+.user-profile-details p
+{
+background: #fff;
+}
+
+
+
+.user-profile-card
+{
     width: 30%;
-}
-
-.cardpic h1 {
-    text-align: center;
-}
-
-.cardpic>img {
-    width: 100%;
-}
-
-
-.cardtitle {
-    margin-left: 2em;
     padding: 2em;
-}
-
-.card .title {
-    color: grey;
-    font-size: 18px;
-}
-
-.MedicineList button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: rgba(46, 24, 24, 0.2);
-    background-color: #000;
-    color: white;
+    height: 60vh;
     text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+
 }
 
-.MedicineList a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
+.user-profile-card h5
+{
+    margin: 5px;
 }
 
-.MedicineList button:hover,
-.MedicineList a:hover {
-    opacity: 0.7;
+.user-profile-personal
+{
+    width: 50%;
+    padding: 0 1em;
+    
+    
+
+}
+
+.EditProfile
+{
+    margin-top: 2em;
+    background:#007bff;
+    border-color: #007bff;
+    font-weight: bold;
+    color: white;
+    height: 3em;
 }
