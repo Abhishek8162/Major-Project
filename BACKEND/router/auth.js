@@ -2,7 +2,7 @@ const { json } = require("express");
 const bodyParser = require("body-parser");
 const express = require("express");
 
-const jwt = require("jsonwebtoken");
+const JWT = require("jsonwebtoken");
 const router = express.Router();
 
 const bcrypt = require("bcryptjs");
@@ -58,23 +58,42 @@ router.post("/login", async (req, res) => {
 
     if (userLogin) {
       const isMatch = await bcrypt.compare(password, userLogin.password);
-      const token = await userLogin.generateAuthToken();
-
-      res.cookie("jwtoken", token, {
-        expires: new Date(Date.now() + 3600000),
-        httpOnly: true,
-      });
 
       if (!isMatch) {
         res.status(400).json({ error: "Invalid Credentials" });
       } else {
-        res.json({ message: "Signin Succesfiull" });
+        const jwtData = {
+          email: userLogin.email,
+        };
+        const token = JWT.sign(
+          jwtData,
+          "MYNAMEISABHISHEKUMARGOVERNMENTCOLLEGEOFENGINEERINGBTECHCSE",
+          {
+            expiresIn: "5d",
+          }
+        );
+
+        res.status(200).cookie("token", token).json({
+          message: "login sucessfull",
+          userLogin
+        });
       }
     } else {
       res.status(400).json({ error: "Invalid Credentials" });
     }
   } catch (error) {
     console.log(error);
+  }
+});
+
+router.post("/api/user/getData", async (req, res) => {
+  try {
+    res.send(req.cookies);
+  } catch (error) {
+    res.status(500).json({
+      message: "Some error occured",
+      error_message: error.message,
+    });
   }
 });
 
