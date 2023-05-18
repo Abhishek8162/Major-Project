@@ -74,12 +74,13 @@ router.post("/login", async (req, res) => {
         );
 
         res.status(200).cookie("token", token).json({
+          sucess: true,
           message: "login sucessfull",
-          userLogin
+          userLogin,
         });
       }
     } else {
-      res.status(400).json({ error: "Invalid Credentials" });
+      res.status(400).json({ sucess: false, error: "Invalid Credentials" });
     }
   } catch (error) {
     console.log(error);
