@@ -3,7 +3,7 @@ import React from 'react'
 function Help() {
   return (
     <div>
-        <div className="instructiondetails" >
+        <div className="instructiondetails" style={{width:"80%"}}>
                 <p>1. The total duration of the examination is 180 min .</p>
                 <p>2. The clock will be set at the server. The countdown timer in the
                     top right corner of screen will display the remaining time available for you

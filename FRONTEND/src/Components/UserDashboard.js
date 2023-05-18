@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route,
 
 import UserProfile from './User Dashboard/UserProfile';
  import EditProfile from './User Dashboard/EditProfile';
+ import Help from './User Dashboard/Help';
+ import Statistics from "./User Dashboard/Statistics"; 
 
 
 
@@ -29,6 +31,11 @@ function DashboardUser() {
 if(id=="editprofile")
 setContent(EditProfile);
 
+if(id=="help")
+setContent(Help);
+
+if(id=="statistics")
+setContent(Statistics);
 
 
 }
@@ -51,7 +58,7 @@ setContent(EditProfile);
        
 
        <li >
-         <Link href="#" >Statistics</Link>
+         <Link href="#" id="statistics"   onClick={handleClick}>Statistics</Link>
        </li>
        
      </ul>
@@ -87,7 +94,7 @@ setContent(EditProfile);
          <Link href="#" >FAQs</Link>
        </li>
        <li >
-         <Link href="#" >Help</Link>
+         <Link href="#" id="help"   onClick={handleClick}>Help</Link>
        </li>
        
      </ul>
