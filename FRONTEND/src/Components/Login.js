@@ -1,7 +1,7 @@
 import "../CSS/Login.css";
 import React, { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
@@ -26,6 +26,7 @@ function Login() {
     });
 
     const data = await res.json();
+    console.log(data);
 
     if (data.status === 422 || !data) {
       window.alert("Invalid Credentials");
@@ -33,6 +34,12 @@ function Login() {
     } else {
       window.alert("Login Successfull");
       console.log("Login Successfull");
+      const userData = JSON.stringify(data.userLogin);
+      console.log(data);
+      sessionStorage.setItem("isAuthenticated", userData);
+      sessionStorage.setItem("Name", data.userLogin.name);
+      sessionStorage.setItem("email", data.userLogin.email);
+      sessionStorage.setItem("phone", data.userLogin.phone);
       navigate("/");
     }
   };

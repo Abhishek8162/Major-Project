@@ -28,6 +28,7 @@ import React from "react";
 function App() {
   return (
     <>
+    
       <Header />
 
       <Routes>
@@ -39,16 +40,13 @@ function App() {
         <Route path="/Instruction" element={<Instruction />} />
         <Route path="/Live" element={<Live />} />
         <Route path="/Completion" element={<Completion />} />
-
         <Route exact path="/Profile" element={<Profile />} />
         <Route exact path="/Services" element={<Services />} />
-        <Route path="/UserDashboard" element={<UserDashboard />} />  {/* login require */}
-
+        <Route path="/UserDashboard" element={<UserDashboard />} />{" "}
+        {/* login require */}
         <Route exact path="/AdminDashboard" element={<AdminDashboard />} />
-
         <Route path="/About" element={<About />} />
         <Route path="/Testlist" element={<Testlist />} />
-
         <Route path="/Home" element={<Navigate replace to="/" />} />
       </Routes>
     </>
