@@ -12,6 +12,9 @@ const [user,setUser] =useState(
         name: "",
         email: "",
         phone: "",
+        address:"",
+        post:"",
+        college:"",
         password: "",
         cpassword: ""
 
@@ -31,7 +34,7 @@ const PostData=async(e)=>
 {
 
     e.preventDefault();
-    const  {name,email,phone,password,cpassword}=user;
+    const  {name,email,phone,address,post,college,password,cpassword}=user;
 
     const res= await fetch("/register",
     {
@@ -41,7 +44,7 @@ const PostData=async(e)=>
         },
         body: JSON.stringify
         ( {
-            name,email,phone,password,cpassword
+            name,email,phone,address,post,college,password,cpassword
             //name:name,email:email,phone:phone,password:password
             // It can also be written but as both are same we can write the above too
         })
@@ -85,6 +88,11 @@ const PostData=async(e)=>
 <input type="email" name="email" placeholder="Email"  value={user.email} onChange={handleInputs}/>
 <input type="text" name="name" placeholder="Full name"  value={user.name} onChange={handleInputs}/>
 <input type="text" name="phone" placeholder="phone"  value={user.phone} onChange={handleInputs}/>
+
+<input type="text" name="address" placeholder="address"  value={user.address} onChange={handleInputs}/>
+<input type="text" name="post" placeholder="post"  value={user.post} onChange={handleInputs}/>
+<input type="text" name="college" placeholder="college"  value={user.college} onChange={handleInputs}/>
+
 <input type="password" name="password" placeholder="password"  value={user.password} onChange={handleInputs}/>
 <input type="password" name="cpassword" placeholder="confirm password"  value={user.cpassword} onChange={handleInputs}/>
 

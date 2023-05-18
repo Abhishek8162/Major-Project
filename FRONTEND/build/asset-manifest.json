@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.fac3de7c.css",
-    "main.js": "/static/js/main.3bcd7868.js",
+    "main.css": "/static/css/main.5a881bda.css",
+    "main.js": "/static/js/main.63f33eba.js",
     "static/js/787.1c7ca609.chunk.js": "/static/js/787.1c7ca609.chunk.js",
     "static/media/violetbg.png": "/static/media/violetbg.49c4738dad48e3bd766d.png",
     "static/media/homepage.png": "/static/media/homepage.bf9149f9bfba19a6bac7.png",
     "static/media/abhishek.jpg": "/static/media/abhishek.e7813abc69781fa5774f.jpg",
+    "static/media/amit.jpg": "/static/media/amit.c41a6eec61cabfeda830.jpg",
+    "static/media/dipasa.jpg": "/static/media/dipasa.59ff167d9ad3ae5c6524.jpg",
+    "static/media/arup.jpg": "/static/media/arup.87d8082c410071154425.jpg",
     "static/media/bluebg.png": "/static/media/bluebg.35505c9f0036730d7fe9.png",
     "static/media/signup.png": "/static/media/signup.238434b400d7cb673b36.png",
     "static/media/upsc.png": "/static/media/upsc.37bc68980c75a2c8acfd.png",
@@ -17,12 +20,12 @@
     "static/media/gatecs.webp": "/static/media/gatecs.c0936017d2315b5efa2f.webp",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.fac3de7c.css.map": "/static/css/main.fac3de7c.css.map",
-    "main.3bcd7868.js.map": "/static/js/main.3bcd7868.js.map",
+    "main.5a881bda.css.map": "/static/css/main.5a881bda.css.map",
+    "main.63f33eba.js.map": "/static/js/main.63f33eba.js.map",
     "787.1c7ca609.chunk.js.map": "/static/js/787.1c7ca609.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fac3de7c.css",
-    "static/js/main.3bcd7868.js"
+    "static/css/main.5a881bda.css",
+    "static/js/main.63f33eba.js"
   ]
 }

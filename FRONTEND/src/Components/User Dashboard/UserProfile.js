@@ -9,10 +9,9 @@ function UserProfile() {
 
 <div className="user-profile-card">
   <img src="https://bootdey.com/img/Content/avatar/avatar7.png"/>
-  <p><b>Abhishek Kumar</b></p>
-  <h5><b>Full Stack Developer</b></h5>
+  <p><b>{sessionStorage.getItem("Name")}</b></p>
+  <h5><b>{sessionStorage.getItem("post")}</b></h5>
   
-  <h5><b>GCE,Keonjhar</b></h5>
   
   <button className="EditProfile">Edit Profile</button>
   
@@ -22,18 +21,20 @@ function UserProfile() {
 
   <div className="user-profile-personal">
   
-  <p><b>Full Name : Abhishek Kumar</b></p>
+  <p><b>Full Name : {sessionStorage.getItem("Name")}</b></p>
   <hr/>
-  <p><b>Address : Abhishek Kumar</b></p>
+  <p><b>Address : {sessionStorage.getItem("address")}</b></p>
   <hr/>
-  <p><b>Full Name : Abhishek Kumar</b></p>
+  <p><b>College : {sessionStorage.getItem("college")}</b></p>
   <hr/>
-  <p><b>Address : Abhishek Kumar</b></p>
+  <p><b>Email : {sessionStorage.getItem("email")}</b></p>
   <hr/>
-  <p><b>Full Name : Abhishek Kumar</b></p>
+  <p><b>Phone: {sessionStorage.getItem("phone")}</b></p>
   <hr/>
-  <p><b>Full Name : Abhishek Kumar</b></p>
+
+  <p><b>Exams Given : Nil</b></p>
   <hr/>
+  
 
   </div>
 

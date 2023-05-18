@@ -21,11 +21,11 @@ router.get("/StudentDashboard", (req, res) => {
 
 router.post("/register", async (req, res) => {
   try {
-    const { name, email, phone, password, cpassword } = req.body;
+    const { name, email, phone,address,post,college, password, cpassword } = req.body;
     console.log(name);
     console.log(email);
 
-    if (!name || !email || !phone || !password || !cpassword) {
+    if (!name || !email || !phone ||!address||!post||!college || !password || !cpassword) {
       return res.status(422).json({ error: "Please fill the fields properly" });
     }
 
@@ -36,7 +36,7 @@ router.post("/register", async (req, res) => {
       return res.status(422).json({ error: "Password is not matching" });
     } else {
       //res.status(201).json({message:"Registered Successfully"})
-      const user = new User({ name, email, phone, password, cpassword });
+      const user = new User({ name, email, phone,address,post,college,password, cpassword });
       await user.save();
       res.status(201).json({ message: "Registered Successfully" });
     }

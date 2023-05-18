@@ -13,7 +13,7 @@ function EditProfile() {
         </p>
         <hr />
         <p>
-          <b>Address : Rengali,Sambalpur</b>
+          <b>Address : {sessionStorage.getItem("address")}</b>
         </p>
         <hr />
         <p>
@@ -25,11 +25,11 @@ function EditProfile() {
         </p>
         <hr />
         <p>
-          <b>Post : Software Engineer</b>
+          <b>Post : {sessionStorage.getItem("post")}</b>
         </p>
         <hr />
         <p>
-          <b>College : GCE Keonjhar</b>
+          <b>College : {sessionStorage.getItem("college")}</b>
         </p>
         <hr />
       </div>

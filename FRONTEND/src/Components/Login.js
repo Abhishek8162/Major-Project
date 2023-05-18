@@ -31,7 +31,13 @@ function Login() {
     if (data.sucess === false) {
       window.alert("Invalid Credentials");
       console.log("Invalid Credentials");
-    } else {
+    } 
+    else if (!email||!password) {
+      window.alert("Invalid Credentials");
+      console.log("Invalid Credentials");
+    }
+    
+    else {
       window.alert("Login Successfull");
       console.log("Login Successfull");
       const userData = JSON.stringify(data.userLogin);
@@ -40,6 +46,11 @@ function Login() {
       sessionStorage.setItem("Name", data.userLogin.name);
       sessionStorage.setItem("email", data.userLogin.email);
       sessionStorage.setItem("phone", data.userLogin.phone);
+      
+      sessionStorage.setItem("address", data.userLogin.address);
+      sessionStorage.setItem("post", data.userLogin.post);
+      sessionStorage.setItem("college", data.userLogin.college);
+
       navigate("/");
     }
   };
@@ -70,7 +81,7 @@ function Login() {
             }}
           />
 
-          <button onClick={loginUser}>login</button>
+          <div><button onClick={loginUser}>login</button></div>
         </form>
 
         <h5>

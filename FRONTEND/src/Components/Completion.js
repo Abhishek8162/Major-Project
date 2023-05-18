@@ -8,7 +8,7 @@ function Completion() {
     <div className="Completionpage">
 
         <h1>
-            Thank You {name}
+            Thank You {sessionStorage.getItem("Name")}
 
         </h1>
         <h3>
