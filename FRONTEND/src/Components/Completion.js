@@ -15,6 +15,12 @@ function Completion() {
             You have successfully submitted the test !
         </h3>
 
+        <p><b>Your Score is : {sessionStorage.getItem("totalscore")} 
+        &nbsp;  out of  {sessionStorage.getItem("totalquestions")} </b></p>
+
+        <p><b>Percentage : {sessionStorage.getItem("totalscore")/sessionStorage.getItem("totalquestions")*100} % </b></p>
+        
+
 
     </div>
   )

@@ -9,6 +9,7 @@ import tcs from "../Images/tcs.png";
 import upsc from "../Images/upsc.png";
 import wipro from "../Images/wipro.png";
 import "../CSS/Exams.css";
+import Signup from "./Signup";
 
 import {
   BrowserRouter as Router,
@@ -117,7 +118,7 @@ function Exams() {
         </div>
       ) : (
 /*         add your own jsz page */
-        <div>pls login to access</div>
+            <Signup/>
       )}
     </div>
   );

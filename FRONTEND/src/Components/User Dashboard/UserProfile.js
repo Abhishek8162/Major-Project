@@ -1,7 +1,12 @@
-import React from 'react'
+
+import React, { Component, useState } from 'react';
+import EditProfile from './EditProfile';
 
 
-function UserProfile() {
+function UserProfile(){
+
+
+
   return (
     <div className="user-profile-page">
 
@@ -13,7 +18,7 @@ function UserProfile() {
   <h5><b>{sessionStorage.getItem("post")}</b></h5>
   
   
-  <button className="EditProfile">Edit Profile</button>
+  <button className="EditProfile" >Edit Profile</button>
   
 
 

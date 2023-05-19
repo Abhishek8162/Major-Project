@@ -12,6 +12,8 @@ function Live() {
 
     const Questionslist = Questions[0].QA;
     const [count, setCount] = useState(1);
+    var score=0;
+    const [response, setResponse] = useState([])
     // const [currentquestion, setCurrentquestion] = useState(1);
     const totalquestions = Questions[0].TotalQuestions;
     var currentquestion = 1;
@@ -20,12 +22,62 @@ function Live() {
     //     "nav-link" + (!isActive ? " unselected" : "")
     //   }
 
+ // option on clicked
+ function handleOptionClick(event)
+ {
+
+
+     document.getElementById("A").style.backgroundColor="rgb(23 172 236)"
+     document.getElementById("B").style.backgroundColor="rgb(23 172 236)"
+     document.getElementById("C").style.backgroundColor="rgb(23 172 236)"
+     document.getElementById("D").style.backgroundColor="rgb(23 172 236)"
+
+
+     var id = event.currentTarget.id;
+ document.getElementById(id).style.backgroundColor="white"
+
+ setResponse((prevresponse)=>[...prevresponse,id]);
+
+ }
+
+ var answerarr=new Array(parseInt(totalquestions));
+ for(let i=0;i<answerarr.length;i++)
+ {
+     answerarr[i]=Questions[0].QA[i].A;
+ }
+
+ function calculatescore() {
+     for(let i=0;i<answerarr.length;i++)
+ {
+     if(answerarr[i]==response[i])
+     {
+     score=score+1;
+    
+    }
+
+
+ }
+
+
+
+     
+ }
+
+
+
+
 
     const next = (event) => {
         if (count < totalquestions) {
             setCount(count + 1);
             document.getElementById("grid-item" + currentquestion).style.backgroundColor = "lightgreen";
 
+
+            document.getElementById("A").style.backgroundColor="rgb(23 172 236)"
+            document.getElementById("B").style.backgroundColor="rgb(23 172 236)"
+            document.getElementById("C").style.backgroundColor="rgb(23 172 236)"
+            document.getElementById("D").style.backgroundColor="rgb(23 172 236)"
+       
             // document.getElementById("grid-item"+currentquestion).style.borderColor = "red";
 
         }
@@ -133,22 +185,55 @@ function Live() {
     //  });
 
 
-    var video = document.querySelector("#videoElement");
+    //Video Player
 
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
+
+//     var video = document.querySelector("#videoElement");
+
+// if (navigator.mediaDevices.getUserMedia) {
+//   navigator.mediaDevices.getUserMedia({ video: true })
+//     .then(function (stream) {
+//       video.srcObject = stream;
+//     })
+//     .catch(function (err0r) {
+//       console.log("Something went wrong!");
+//     });
+// }
 
     const handlesubmit = () => {
-        window.location.href = "/Completion"
+        calculatescore();
+
+        
+       alert("totalscore is "+score)
+        
+      sessionStorage.setItem("totalscore", score);
+      sessionStorage.setItem("totalquestions", totalquestions);
+      
+
+       //   const res = await fetch("/addexam", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       score,
+    //       totalquestions,
+    //       email
+    //       //name:name,email:email,phone:phone,password:password
+    //       // It can also be written but as both are same we can write the above too
+    //     }),
+    //   });
+
+      
+       window.location.href = "/Completion"
 
     }
+
+
+
+   
+
+
 
     return (
 
@@ -223,17 +308,17 @@ if (navigator.mediaDevices.getUserMedia) {
 
 
 
-                                <ol type="A">
-                                    <li className="A" >
+                                <ol type="A" className="Options-box">
+                                    <li id="A" onClick={handleOptionClick} >
                                         {question.options[0]}
                                     </li>
-                                    <li className="B">
+                                    <li id="B" onClick={handleOptionClick}>
                                         {question.options[1]}
                                     </li>
-                                    <li className="C">
+                                    <li id="C" onClick={handleOptionClick}>
                                         {question.options[2]}
                                     </li>
-                                    <li className="D">
+                                    <li id="D" onClick={handleOptionClick}>
                                         {question.options[3]}
                                     </li>
 

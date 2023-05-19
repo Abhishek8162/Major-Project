@@ -93,6 +93,16 @@
     
 }
 
+/* Options box */
+.Options-box > *
+{
+    border: 2px solid black;
+    margin : 1em 0em;
+    border-radius: 5px;
+}
+
+
+
 
 .Slider>button {
    font-weight: bold;

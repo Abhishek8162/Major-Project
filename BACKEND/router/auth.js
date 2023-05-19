@@ -75,7 +75,7 @@ router.post("/login", async (req, res) => {
 
         res.status(200).cookie("token", token).json({
           sucess: true,
-          message: "login sucessfull",
+          message: "login sucessful",
           userLogin,
         });
       }
@@ -97,5 +97,30 @@ router.post("/api/user/getData", async (req, res) => {
     });
   }
 });
+
+
+
+// router.post("/addexam", async (req, res) => {
+//   try {
+//     const { score, totalquestions ,email} = req.body;
+//     var examname="tcs"
+//     exams:[{examname,score, totalquestions }]
+
+//     if (!score||!totalquestions||!email) {
+//       return res.status(400).json({ error: "Error in submitting " });
+//     }
+
+//     const updateDocument = async(email)=>
+//     {
+//       try{
+// const result = await User.updateOne({ email: email },
+//   {$set:{exams:exams}}
+//   );
+//       }
+//       catch(err)
+//       {
+//           console.log(err);
+//       }
+//     }
 
 module.exports = router;

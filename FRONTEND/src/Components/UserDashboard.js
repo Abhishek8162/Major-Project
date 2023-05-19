@@ -1,5 +1,6 @@
 import React from "react";
 import "../CSS/DashboardUser.css";
+import Signup from "./Signup";
 
 import { useState } from "react";
 
@@ -14,6 +15,7 @@ import {
 
 import UserProfile from "./User Dashboard/UserProfile";
 import EditProfile from "./User Dashboard/EditProfile";
+import Feedback from "./User Dashboard/Feedback";
 
 function DashboardUser() {
   const [isprofilecard, setIsprofilecard] = useState(true);
@@ -22,11 +24,21 @@ function DashboardUser() {
 
   const [content, setContent] = useState(UserProfile);
 
+  // function handleContent() {
+  //   setContent(<EditProfile/>)
+  //   console.log("wirkinb")
+    
+  // }
+
   function handleClick(event) {
     var id = event.currentTarget.id;
-    if (id == "userprofile") setContent(UserProfile);
+    if (id == "userprofile") setContent(<UserProfile />);
 
-    if (id == "editprofile") setContent(EditProfile);
+    if (id == "editprofile") setContent(<EditProfile />);
+
+    if (id == "feedback") setContent(<Feedback />);
+
+
   }
 
   return (
@@ -74,7 +86,7 @@ function DashboardUser() {
                 </Link>
               </li>
               <li>
-                <Link href="#">Give FeedBack</Link>
+                <Link href="#" id="feedback" onClick={handleClick} >Give FeedBack</Link>
               </li>
               <li>
                 <Link href="#">FAQs</Link>
@@ -88,7 +100,7 @@ function DashboardUser() {
           {content}
         </div>
       ) : (
-        <div>pls login to access</div>
+        <Signup/>
       )}
     </>
   );
