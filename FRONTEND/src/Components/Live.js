@@ -200,7 +200,7 @@ function Live() {
 //     });
 // }
 
-    const handlesubmit = () => {
+    const handlesubmit = async() => {
         calculatescore();
 
         
@@ -208,23 +208,42 @@ function Live() {
         
       sessionStorage.setItem("totalscore", score);
       sessionStorage.setItem("totalquestions", totalquestions);
-      
-
-       //   const res = await fetch("/addexam", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       score,
-    //       totalquestions,
-    //       email
-    //       //name:name,email:email,phone:phone,password:password
-    //       // It can also be written but as both are same we can write the above too
-    //     }),
-    //   });
+      const email=sessionStorage.getItem("email")
+      const password=sessionStorage.getItem("password")
+      const examname="1"
 
       
+
+         const res = await fetch("/addexam", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          score,
+          totalquestions,
+          examname,
+          email
+          //name:name,email:email,phone:phone,password:password
+          // It can also be written but as both are same we can write the above too
+        }),
+      });
+
+      const data = await res.json();
+  
+      if (data.sucess === false) {
+        window.alert("Invalid Credentials");
+        console.log("Invalid Credentials");
+      }
+      else
+      {window.alert(" Successfully submitted");
+      console.log(" Successfully submitted");
+      const userData = JSON.stringify(data.userLogin);
+      console.log(data);
+    }
+      
+
+
        window.location.href = "/Completion"
 
     }

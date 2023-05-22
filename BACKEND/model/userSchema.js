@@ -46,22 +46,22 @@ const userSchema = new mongoose.Schema({
   ],
 
   
-  // exams: [
-  //   {
-  //     examname: {
-  //       type: Number,
+  exams: [
+    {
+      examname: {
+        type: String,
         
-  //     },
-  //     score: {
-  //       type: Number,
+      },
+      score: {
+        type: Number,
         
-  //     },
-  //     totalquestion: {
-  //       type: Number,
+      },
+      totalquestions: {
+        type: Number,
         
-  //     },
-  //   },
-  // ],
+      },
+    },
+  ],
 });
 
 //we are generating tokens

@@ -100,27 +100,77 @@ router.post("/api/user/getData", async (req, res) => {
 
 
 
-// router.post("/addexam", async (req, res) => {
-//   try {
-//     const { score, totalquestions ,email} = req.body;
-//     var examname="tcs"
-//     exams:[{examname,score, totalquestions }]
+router.post("/addexam", async (req, res) => {
+  try {
+    const { score, totalquestions ,examname,email} = req.body;
+   
+    var exams={examname,score, totalquestions }
 
-//     if (!score||!totalquestions||!email) {
-//       return res.status(400).json({ error: "Error in submitting " });
-//     }
 
-//     const updateDocument = async(email)=>
-//     {
-//       try{
-// const result = await User.updateOne({ email: email },
-//   {$set:{exams:exams}}
-//   );
-//       }
-//       catch(err)
-//       {
-//           console.log(err);
-//       }
-//     }
+
+const userLogin = await User.findOneAndUpdate({ email: email },
+  {$push:{exams:exams}
+   , function (error, success) {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(success);
+    }}} 
+  );
+
+  //this below area helps to send the resonse back
+  //to the frontend . this is not really necessary
+
+
+    
+    var password="1"
+
+    if (userLogin) {
+      const isMatch = await bcrypt.compare(password, userLogin.password);
+
+      if (!isMatch) {
+        res.status(400).json({ error: "password not match" });
+      } else {
+        const jwtData = {
+          email: userLogin.email,
+        };
+        const token = JWT.sign(
+          jwtData,
+          "MYNAMEISABHISHEKUMARGOVERNMENTCOLLEGEOFENGINEERINGBTECHCSE",
+          {
+            expiresIn: "5d",
+          }
+        );
+
+        res.status(200).cookie("token", token).json({
+          sucess: true,
+          message: "login sucessful",
+          userLogin,
+        });
+
+        
+      }
+    }
+
+
+
+    
+
+
+
+  
+  
+  }
+
+  
+  catch(err)
+  {console.log(err);}
+
+
+  })
+
+
+
+
 
 module.exports = router;
