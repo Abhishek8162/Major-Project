@@ -5,6 +5,7 @@ import EditProfile from './EditProfile';
 
 function UserProfile(){
 
+  var noofexams=JSON.parse(sessionStorage.getItem("examstats")).length;
 
 
   return (
@@ -37,7 +38,9 @@ function UserProfile(){
   <p><b>Phone: {sessionStorage.getItem("phone")}</b></p>
   <hr/>
 
-  <p><b>Exams Given : Nil</b></p>
+  
+  <p><b>Exams Given :  {noofexams>0?noofexams:0}</b></p>
+  
   <hr/>
   
 

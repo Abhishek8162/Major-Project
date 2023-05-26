@@ -50,6 +50,10 @@ function Login() {
       sessionStorage.setItem("address", data.userLogin.address);
       sessionStorage.setItem("post", data.userLogin.post);
       sessionStorage.setItem("college", data.userLogin.college);
+      
+
+      
+      sessionStorage.setItem("examstats", JSON.stringify(data.userLogin.exams));
 
       navigate("/");
     }

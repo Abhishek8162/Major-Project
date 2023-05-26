@@ -115,7 +115,8 @@ const userLogin = await User.findOneAndUpdate({ email: email },
         console.log(error);
     } else {
         console.log(success);
-    }}} 
+    }}} ,
+    { new: true }
   );
 
   //this below area helps to send the resonse back
@@ -126,11 +127,7 @@ const userLogin = await User.findOneAndUpdate({ email: email },
     var password="1"
 
     if (userLogin) {
-      const isMatch = await bcrypt.compare(password, userLogin.password);
-
-      if (!isMatch) {
-        res.status(400).json({ error: "password not match" });
-      } else {
+      
         const jwtData = {
           email: userLogin.email,
         };
@@ -149,7 +146,7 @@ const userLogin = await User.findOneAndUpdate({ email: email },
         });
 
         
-      }
+      
     }
 
 

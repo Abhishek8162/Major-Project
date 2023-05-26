@@ -1,0 +1,29 @@
+#statistics-page-title
+{
+    text-align: center;
+   
+}
+
+
+.statistics-page
+{
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+    width: 100%;
+    
+}
+
+
+.statistics-bargraph
+{   
+    width: 30em;
+    margin: 2em auto 7em auto;
+    
+}
+
+.statistics-piegraph
+{
+    width: 20em; 
+    margin: 2em auto 7em auto;
+}

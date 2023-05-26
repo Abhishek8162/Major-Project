@@ -239,12 +239,17 @@ function Live() {
       {window.alert(" Successfully submitted");
       console.log(" Successfully submitted");
       const userData = JSON.stringify(data.userLogin);
-      console.log(data);
+      
+    //   sessionStorage.setItem("examstats",  JSON.stringify(data.userLogin.exams));
+      
+      //console.log(JSON.stringify(data.userLogin.exams));
     }
       
 
+    console.log( JSON.stringify(data.userLogin.exams))
+    sessionStorage.setItem("examstats",  JSON.stringify(data.userLogin.exams));
 
-       window.location.href = "/Completion"
+      // window.location.href = "/Completion"
 
     }
 

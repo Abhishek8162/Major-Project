@@ -3,6 +3,9 @@ import "../CSS/Completion.css"
 
 function Completion() {
 
+  // sessionStorage.setItem("examstats",  JSON.stringify(data.userLogin.exams));
+      
+
     const name="Abhishek Kumar"
   return (
     <div className="Completionpage">

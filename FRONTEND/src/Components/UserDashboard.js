@@ -16,6 +16,11 @@ import {
 import UserProfile from "./User Dashboard/UserProfile";
 import EditProfile from "./User Dashboard/EditProfile";
 import Feedback from "./User Dashboard/Feedback";
+import Help from "./User Dashboard/Help";
+import Statistics from "./User Dashboard/Statistics";
+import Testappeared from "./User Dashboard/Testappeared";
+import Testrequested from "./User Dashboard/Testrequested";
+import Faq from "./User Dashboard/Faq"
 
 function DashboardUser() {
   const [isprofilecard, setIsprofilecard] = useState(true);
@@ -36,7 +41,19 @@ function DashboardUser() {
 
     if (id == "editprofile") setContent(<EditProfile />);
 
-    if (id == "feedback") setContent(<Feedback />);
+    if (id == "Feedback") setContent(<Feedback />);
+
+    if (id == "help") setContent(<Help />);
+
+    if (id == "Faq") setContent(<Faq />);
+
+    if (id == "Statistics") setContent(<Statistics />);
+
+    
+    if (id == "Testrequested") setContent(<Testrequested />);
+    
+    if (id == "Testappeared") setContent(<Testappeared />);
+
 
 
   }
@@ -59,40 +76,40 @@ function DashboardUser() {
               </li>
 
               <li>
-                <Link href="#">Statistics</Link>
+                <Link href="#" id="Statistics" onClick={handleClick}>Statistics</Link>
               </li>
             </ul>
             <hr />
 
             <ul>
               <li>
-                <Link href="#">
+                <Link href="#" >
                   <p>Tests Given</p>
                 </Link>
               </li>
               <li>
-                <Link href="#">Test Appeared</Link>
+                <Link href="#" id="Testappeared" onClick={handleClick}>Test Appeared</Link>
               </li>
               <li>
-                <Link href="#">Test Requested</Link>
+                <Link href="#" id="Testrequested" onClick={handleClick}>Test Requested</Link>
               </li>
             </ul>
             <hr />
 
             <ul>
               <li>
-                <Link href="#">
+                <Link href="#" >
                   <p>Feedback</p>
                 </Link>
               </li>
               <li>
-                <Link href="#" id="feedback" onClick={handleClick} >Give FeedBack</Link>
+                <Link href="#" id="Feedback" onClick={handleClick} >Give FeedBack</Link>
               </li>
               <li>
-                <Link href="#">FAQs</Link>
+                <Link href="#" id="Faq" onClick={handleClick}>FAQs</Link>
               </li>
               <li>
-                <Link href="#">Help</Link>
+                <Link href="#"id="help" onClick={handleClick}>Help</Link>
               </li>
             </ul>
           </div>
