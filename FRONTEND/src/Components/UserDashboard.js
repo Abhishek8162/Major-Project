@@ -19,7 +19,6 @@ import Feedback from "./User Dashboard/Feedback";
 import Help from "./User Dashboard/Help";
 import Statistics from "./User Dashboard/Statistics";
 import Testappeared from "./User Dashboard/Testappeared";
-import Testrequested from "./User Dashboard/Testrequested";
 import Faq from "./User Dashboard/Faq"
 
 function DashboardUser() {
@@ -50,7 +49,6 @@ function DashboardUser() {
     if (id == "Statistics") setContent(<Statistics />);
 
     
-    if (id == "Testrequested") setContent(<Testrequested />);
     
     if (id == "Testappeared") setContent(<Testappeared />);
 
@@ -90,9 +88,7 @@ function DashboardUser() {
               <li>
                 <Link href="#" id="Testappeared" onClick={handleClick}>Test Appeared</Link>
               </li>
-              <li>
-                <Link href="#" id="Testrequested" onClick={handleClick}>Test Requested</Link>
-              </li>
+              
             </ul>
             <hr />
 

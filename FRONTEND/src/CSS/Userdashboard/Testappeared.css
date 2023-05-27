@@ -1,0 +1,28 @@
+.Testappeared-page
+{
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    padding: 0 2em;
+    font-weight: bold;
+}
+
+.Testappeared-list
+{
+    padding: 1em;
+    background:rgb(113, 162, 236);
+    margin: 2em 0;
+    font-size: x-large;
+    border-radius: 5px;
+}
+
+.Testappeared-details
+{
+    display: inline-block;
+    margin-left: 70%;
+}
+
+.Testappeared-details>span
+{
+  margin: 0 1em 0 0;
+}

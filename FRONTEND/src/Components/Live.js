@@ -188,17 +188,17 @@ function Live() {
     //Video Player
 
 
-//     var video = document.querySelector("#videoElement");
+    var video = document.querySelector("#videoElement");
 
-// if (navigator.mediaDevices.getUserMedia) {
-//   navigator.mediaDevices.getUserMedia({ video: true })
-//     .then(function (stream) {
-//       video.srcObject = stream;
-//     })
-//     .catch(function (err0r) {
-//       console.log("Something went wrong!");
-//     });
-// }
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
 
     const handlesubmit = async() => {
         calculatescore();
@@ -249,7 +249,7 @@ function Live() {
     console.log( JSON.stringify(data.userLogin.exams))
     sessionStorage.setItem("examstats",  JSON.stringify(data.userLogin.exams));
 
-      // window.location.href = "/Completion"
+      window.location.href = "/Completion"
 
     }
 
