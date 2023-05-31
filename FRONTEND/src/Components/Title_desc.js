@@ -4,11 +4,14 @@ import signup from "../Images/signup.png"
 
 import { BrowserRouter as Router, Routes, Route, 
   Navigate,Link } from 'react-router-dom';
+  import React from 'react';
 
-import React from "react";
+  
 
 function Title_desc() {
     return (
+      <>
+     
       <div className="title">
         <div className="title_desc">
         <h1>
@@ -20,13 +23,27 @@ function Title_desc() {
         any Competative exam or to crack a Coding Interview .
         </h2>
 
+
+        {!sessionStorage.getItem("isAuthenticated") ? (
+
          <Link to="Signup" ><img src={signup} /></Link>
+
+         ):
+         (
+          <></>
+         )
+   
+         }
+
 
       </div>
 
       
 
       </div>
+      
+
+     </>
     );
   }
   

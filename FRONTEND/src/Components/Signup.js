@@ -36,6 +36,16 @@ const PostData=async(e)=>
     e.preventDefault();
     const  {name,email,phone,address,post,college,password,cpassword}=user;
 
+    if(name&&email&&phone&&address&&post&&college&&password&&cpassword){
+        if(password!=cpassword)
+        {
+            alert("Password does not match")
+        }
+        else
+        {
+
+
+
     const res= await fetch("/register",
     {
         method: "POST",
@@ -67,6 +77,14 @@ const PostData=async(e)=>
 
 
 }
+    }
+else
+{
+    alert("Fill all the forms")
+}
+
+
+}
 
 
     return( 
@@ -83,18 +101,18 @@ const PostData=async(e)=>
 
 
  
-<form method="POST" >
+<form   method="POST" >
 
-<input type="email" name="email" placeholder="Email"  value={user.email} onChange={handleInputs}/>
-<input type="text" name="name" placeholder="Full name"  value={user.name} onChange={handleInputs}/>
-<input type="text" name="phone" placeholder="phone"  value={user.phone} onChange={handleInputs}/>
+<input type="email" name="email" placeholder="Email"  value={user.email} onChange={handleInputs} required></input>
+<input type="text" name="name" placeholder="Full name"  value={user.name} onChange={handleInputs} required></input>
+<input type="number" name="phone" placeholder="phone"  value={user.phone} onChange={handleInputs} required></input>
 
-<input type="text" name="address" placeholder="address"  value={user.address} onChange={handleInputs}/>
-<input type="text" name="post" placeholder="post"  value={user.post} onChange={handleInputs}/>
-<input type="text" name="college" placeholder="college"  value={user.college} onChange={handleInputs}/>
+<input type="text" name="address" placeholder="address"  value={user.address} onChange={handleInputs} required></input>
+<input type="text" name="post" placeholder="post"  value={user.post} onChange={handleInputs} required></input>
+<input type="text" name="college" placeholder="college"  value={user.college} onChange={handleInputs} required></input>
 
-<input type="password" name="password" placeholder="password"  value={user.password} onChange={handleInputs}/>
-<input type="password" name="cpassword" placeholder="confirm password"  value={user.cpassword} onChange={handleInputs}/>
+<input type="password" name="password" placeholder="password"  value={user.password} onChange={handleInputs} required></input>
+<input type="password" name="cpassword" placeholder="confirm password"  value={user.cpassword} onChange={handleInputs} required></input>
 
 
 <input type="submit" name="" value="Signup" id="submit" onClick={PostData}/>

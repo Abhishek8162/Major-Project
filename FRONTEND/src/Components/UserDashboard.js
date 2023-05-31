@@ -73,9 +73,7 @@ function DashboardUser() {
                 </Link>
               </li>
 
-              <li>
-                <Link href="#" id="Statistics" onClick={handleClick}>Statistics</Link>
-              </li>
+             
             </ul>
             <hr />
 
@@ -87,6 +85,10 @@ function DashboardUser() {
               </li>
               <li>
                 <Link href="#" id="Testappeared" onClick={handleClick}>Test Appeared</Link>
+              </li>
+
+              <li>
+                <Link href="#" id="Statistics" onClick={handleClick}>Statistics</Link>
               </li>
               
             </ul>

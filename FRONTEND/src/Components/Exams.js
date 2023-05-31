@@ -11,6 +11,9 @@ import wipro from "../Images/wipro.png";
 import "../CSS/Exams.css";
 import Signup from "./Signup";
 
+
+import {useState} from 'react'
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,6 +26,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Exams() {
+
+
+ // const [liveexamname,setLiveexamname] =useState("")
+
   return (
     <div>
       {sessionStorage.getItem("isAuthenticated") ? (
@@ -37,6 +44,9 @@ function Exams() {
               <div
                 className="Exam-card"
                 onClick={() => {
+                  sessionStorage.setItem("Liveexamname", "Accenture Tests");
+                  sessionStorage.setItem("Liveexamno", "1");
+
                   window.location.href = "Testlist";
                 }}
               >
@@ -47,6 +57,8 @@ function Exams() {
               <div
                 className="Exam-card"
                 onClick={() => {
+                  sessionStorage.setItem("Liveexamname", "TCS Ninja");                  
+                  sessionStorage.setItem("Liveexamno", "2");
                   window.location.href = "Testlist";
                 }}
               >
@@ -57,6 +69,8 @@ function Exams() {
               <div
                 className="Exam-card"
                 onClick={() => {
+                  sessionStorage.setItem("Liveexamname", "Wipro Tests");
+                  sessionStorage.setItem("Liveexamno", "3");
                   window.location.href = "Testlist";
                 }}
               >
@@ -64,12 +78,22 @@ function Exams() {
                 <h4>Wipro</h4>
               </div>
 
-              <div className="Exam-card">
+              <div className="Exam-card"
+               onClick={() => {
+                sessionStorage.setItem("Liveexamname", "HCL Tests");
+                sessionStorage.setItem("Liveexamno", "4");
+                window.location.href = "Testlist";
+              }}>
                 <img src={hcl} />
                 <h4>HCL</h4>
               </div>
 
-              <div className="Exam-card">
+              <div className="Exam-card"
+               onClick={() => {
+                sessionStorage.setItem("Liveexamname", "Infosys Tests");
+                sessionStorage.setItem("Liveexamno", "5");
+                window.location.href = "Testlist";
+              }}>
                 <img src={infosys} />
                 <h4>Infosys</h4>
               </div>

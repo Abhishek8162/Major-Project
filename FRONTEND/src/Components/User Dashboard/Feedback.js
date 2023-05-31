@@ -1,14 +1,18 @@
 import React from 'react'
+import "../../CSS/Userdashboard/Feedback.css"
+
 
 function Feedback() {
   return (
-    <div>
+    <div className="Feedback-page">
         
-        <div className="feedback-header">
-                
-                        
-                </div>
+        
                 <div className ="feedback-content">
+
+                  <form style={{height: "100%"}}>
+                    <textarea className="feedback-textarea">Write your Feedback</textarea>
+                    <input type="submit" className="feedback-submit"/>
+                  </form>
                 
                         
                 </div>

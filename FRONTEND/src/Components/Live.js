@@ -69,12 +69,14 @@ function Live() {
     console.log(field1Value, field2Value);
   };
 
-  const Questionslist = Questions[0].QA;
+  const Questionslist = Questions[
+    sessionStorage.getItem("Liveexamno")-1].QA;
   const [count, setCount] = useState(1);
   var score = 0;
   const [response, setResponse] = useState([]);
   // const [currentquestion, setCurrentquestion] = useState(1);
-  const totalquestions = Questions[0].TotalQuestions;
+  const totalquestions = Questions[
+    sessionStorage.getItem("Liveexamno")-1].TotalQuestions;
   var currentquestion = 1;
 
   // className={isActive =>
@@ -237,7 +239,7 @@ function Live() {
     sessionStorage.setItem("totalquestions", totalquestions);
     const email = sessionStorage.getItem("email");
     const password = sessionStorage.getItem("password");
-    const examname = "1";
+    const examname = sessionStorage.getItem("Liveexamno");
 
     const res = await fetch("/addexam", {
       method: "POST",
@@ -272,13 +274,13 @@ function Live() {
     console.log(JSON.stringify(data.userLogin.exams));
     sessionStorage.setItem("examstats", JSON.stringify(data.userLogin.exams));
 
-    /* window.location.href = "/Completion"; */
+     window.location.href = "/Completion"; 
   };
 
   return (
     <div className="Live">
       <div className="live-heading">
-        <h2> TCS NQT Exam </h2>
+        <h2> {sessionStorage.getItem("Liveexamname")}</h2>
         <p className="sections">
           <p>{message}</p>
           <p>Quantative</p>

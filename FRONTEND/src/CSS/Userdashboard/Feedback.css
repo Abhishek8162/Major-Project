@@ -1,0 +1,54 @@
+.Feedback-page
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    /* padding: 0 2em; */
+    font-weight: bold;
+}
+
+.feedback-content
+{
+    margin: 3em auto;
+    width: 65%; 
+    height: 40%;   
+
+}
+
+
+
+.feedback-textarea
+{
+
+   
+    background: lightblue;
+    width: 95%;
+    height: 95%;
+    border: solid gray 2px;
+    border-radius: 5px;
+    box-shadow: gray 5px 5px;
+    
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* .feedback-content:hover
+{
+    width: 70%;
+    height: 50%;
+
+} */
+
+.feedback-submit
+{
+    height: 2em;
+    margin-top:2em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid gray 2px;
+    box-shadow: gray 2px 2px;
+    background: lightblue;
+
+}
